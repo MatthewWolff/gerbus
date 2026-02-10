@@ -8,11 +8,13 @@ const AppRoutes: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Handle 404 redirects with hash
+    // Handle 404 redirects with hash - only run once
     const hash = window.location.hash;
     if (hash && hash.startsWith('#/')) {
       const path = hash.replace('#', '');
       navigate(path, { replace: true });
+      // Clear the hash after navigation
+      window.history.replaceState(null, '', window.location.pathname);
     }
   }, [navigate]);
 
