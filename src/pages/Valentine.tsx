@@ -34,6 +34,7 @@ const styles = {
     color: '#ff1493',
     marginBottom: '2rem',
     textAlign: 'center' as const,
+    fontFamily: "'Pacifico', cursive",
   },
   buttonZone: {
     position: 'relative' as const,
