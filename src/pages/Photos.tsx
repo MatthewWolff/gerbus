@@ -85,6 +85,16 @@ const Photos: React.FC = () => {
 
   useEffect(() => {
     document.title = 'Photos';
+    
+    // Play cantina song on load
+    const audio = new Audio('https://www.televisiontunes.com/uploads/audio/Star%20Wars%20-%20Cantina%20Song.mp3');
+    audio.loop = true;
+    audio.play().catch(err => console.log('Audio autoplay blocked:', err));
+    
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
   }, []);
 
   return (
