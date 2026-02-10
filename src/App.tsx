@@ -1,16 +1,8 @@
 import React from 'react';
+import Valentine from './pages/Valentine';
 
 const App: React.FC = () => {
-  return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh' 
-    }}>
-      <div>Justin</div>
-    </div>
-  );
+  return <Valentine />;
 };
 
 export default App;
