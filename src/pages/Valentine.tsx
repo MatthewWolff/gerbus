@@ -1,7 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 
 const DETECTION_RADIUS = 140;
-const MOVE_DISTANCE = 150;
+const MOVE_DISTANCE = 200;
 
 const styles = {
   container: {
@@ -38,7 +38,7 @@ const styles = {
   buttonZone: {
     position: 'relative' as const,
     width: '520px',
-    height: '150px',
+    height: '200px',
     margin: '0 auto',
   },
   yesButton: {
