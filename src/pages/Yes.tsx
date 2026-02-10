@@ -2,9 +2,9 @@ import React, { useMemo } from 'react';
 
 // Add your GIF URLs here
 const CELEBRATION_GIFS = [
-  'https://tenor.com/view/lov-you-gif-7161129628444095192',
-  'https://media.giphy.com/media/example2/giphy.gif',
-  'https://media.giphy.com/media/example3/giphy.gif',
+  'https://media1.tenor.com/m/Y2FxdK3vctgAAAAd/lov-you.gif',
+  'https://media1.tenor.com/m/HqqEEFNbLNEAAAAd/chile-yoda.gif',
+  'https://media1.tenor.com/m/OC-AjwOOBHIAAAAd/star-wars.gif',
 ];
 
 const styles = {
@@ -34,7 +34,9 @@ const styles = {
     fontFamily: "'Pacifico', cursive",
   },
   gif: {
-    width: 'min(500px, 90vw)',
+    width: '100%',
+    maxWidth: '500px',
+    height: 'auto',
     borderRadius: '12px',
     boxShadow: '0 10px 24px rgba(0,0,0,0.14)',
   },
