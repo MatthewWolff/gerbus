@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-route
 import Valentine from './pages/Valentine';
 import Yes from './pages/Yes';
 import No from './pages/No';
+import Photos from './pages/Photos';
 
 const AppRoutes: React.FC = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/valentine/" element={<Valentine />} />
       <Route path="/yes/" element={<Yes />} />
       <Route path="/no/" element={<No />} />
+      <Route path="/photos/" element={<Photos />} />
     </Routes>
   );
 };
