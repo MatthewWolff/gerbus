@@ -40,7 +40,6 @@ const styles = {
     width: '520px',
     height: '200px',
     margin: '0 auto',
-    overflow: 'visible',
   },
   yesButton: {
     position: 'absolute' as const,
@@ -99,6 +98,9 @@ const Valentine: React.FC = () => {
 
     let newLeft = (button.left - zone.left) + dx * MOVE_DISTANCE;
     let newTop = (button.top - zone.top) + dy * MOVE_DISTANCE;
+
+    newLeft = clamp(newLeft, 0, zone.width - button.width);
+    newTop = clamp(newTop, 0, zone.height - button.height);
 
     noButtonRef.current.style.left = `${newLeft}px`;
     noButtonRef.current.style.top = `${newTop}px`;
