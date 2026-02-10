@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <script>
-    // Redirect to index.html with the path as a hash
-    const path = window.location.pathname.replace('/gerbus', '');
-    window.location.replace('/gerbus/#' + path);
-  </script>
+    <script>
+        // Preserve the path for React Router
+        const path = window.location.pathname;
+        const search = window.location.search;
+        window.location.replace('/gerbus/' + (search ? search + '&from=404' : '?from=404') + '#' + path);
+    </script>
 </head>
-<body>
-</body>
+<body></body>
 </html>
