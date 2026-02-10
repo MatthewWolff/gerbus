@@ -23,6 +23,12 @@ const styles = {
     textAlign: 'center' as const,
     boxShadow: '0 18px 60px rgba(0,0,0,0.15)',
   },
+  ewok: {
+    width: 'min(260px, 80vw)',
+    margin: '0 auto 20px',
+    display: 'block',
+    filter: 'drop-shadow(0 10px 14px rgba(0,0,0,0.12))',
+  },
   title: {
     fontSize: '3rem',
     color: '#ff1493',
@@ -118,6 +124,7 @@ const Valentine: React.FC = () => {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
+        <img src="/gerbus/images/ewok.png" alt="Ewok" style={styles.ewok} />
         <h1 style={styles.title}>💝 Will you be my Valentine? 💝</h1>
         <div ref={zoneRef} onMouseMove={handleMouseMove} style={styles.buttonZone}>
           <button onClick={handleYes} style={styles.yesButton}>
