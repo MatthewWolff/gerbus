@@ -22,8 +22,8 @@ const AppRoutes: React.FC = () => {
     <Routes>
       <Route path="/" element={<Navigate to="/valentine/" replace />} />
       <Route path="/valentine/" element={<Valentine />} />
-      <Route path="/valentine/yes/" element={<Yes />} />
-      <Route path="/valentine/no/" element={<No />} />
+      <Route path="/yes/" element={<Yes />} />
+      <Route path="/no/" element={<No />} />
     </Routes>
   );
 };
