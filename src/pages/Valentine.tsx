@@ -124,7 +124,7 @@ const Valentine: React.FC = () => {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <img src="/gerbus/images/ewok.png" alt="Ewok" style={styles.ewok} />
+        <img src="/gerbus/valentine/ewok.png" alt="Ewok" style={styles.ewok} />
         <h1 style={styles.title}>Will you be my Valentine?</h1>
         <div ref={zoneRef} onMouseMove={handleMouseMove} style={styles.buttonZone}>
           <button onClick={handleYes} style={styles.yesButton}>
