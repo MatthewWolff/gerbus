@@ -86,7 +86,7 @@ const Valentine: React.FC = () => {
   }, []);
 
   const handleYes = useCallback(() => {
-    window.location.href = '/gerbus/yes/';
+    window.location.href = '/gerbus/valentine/yes/';
   }, []);
 
   const handleNoClick = useCallback((e: React.MouseEvent | React.TouchEvent) => {

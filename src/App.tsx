@@ -23,8 +23,8 @@ const AppRoutes: React.FC = () => {
     <Routes>
       <Route path="/" element={<Valentine />} />
       <Route path="/valentine/" element={<Valentine />} />
-      <Route path="/yes/" element={<Yes />} />
-      <Route path="/no/" element={<No />} />
+      <Route path="/valentine/yes/" element={<Yes />} />
+      <Route path="/valentine/no/" element={<No />} />
       <Route path="/photos/" element={<Photos />} />
     </Routes>
   );

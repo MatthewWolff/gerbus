@@ -84,7 +84,7 @@ const Photos: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = 'Photos';
+    document.title = 'Our BEST Photos';
     
     // Play cantina song on load
     const audio = new Audio('https://www.televisiontunes.com/uploads/audio/Star%20Wars%20-%20Cantina%20Song.mp3');
@@ -99,7 +99,7 @@ const Photos: React.FC = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Photos</h1>
+      <h1 style={styles.title}>Our BEST Photos</h1>
       <div style={styles.grid}>
         {images.map((img, index) => (
           <div
