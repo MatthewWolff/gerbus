@@ -56,6 +56,24 @@ const Yes: React.FC = () => {
       <div style={styles.card}>
         <h1 style={styles.title}>Yay! 🎉💕</h1>
         <img src={randomGif} alt="Celebration" style={styles.gif} />
+        <button
+          onClick={() => window.location.href = '/gerbus/photos/'}
+          style={{
+            marginTop: '2rem',
+            padding: '1rem 2rem',
+            fontSize: '1.2rem',
+            backgroundColor: '#ff69b4',
+            color: 'white',
+            border: 'none',
+            borderRadius: '999px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            boxShadow: '0 10px 24px rgba(0,0,0,0.14)',
+            fontFamily: "'Pacifico', cursive",
+          }}
+        >
+          now look at us 💕
+        </button>
       </div>
     </div>
   );
