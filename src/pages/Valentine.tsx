@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useEffect } from 'react';
 
 const DETECTION_RADIUS = 140;
 const MOVE_DISTANCE = 200;
@@ -80,6 +80,10 @@ const clamp = (n: number, min: number, max: number) => Math.max(min, Math.min(ma
 const Valentine: React.FC = () => {
   const zoneRef = useRef<HTMLDivElement>(null);
   const noButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    document.title = 'Will you be my Valentine?';
+  }, []);
 
   const handleYes = useCallback(() => {
     window.location.href = '/gerbus/valentine/yes/';

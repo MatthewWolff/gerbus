@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 
 // Add your GIF URLs here
 const CELEBRATION_GIFS = [
@@ -43,6 +43,10 @@ const styles = {
 };
 
 const Yes: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Yay! 🎉💕';
+  }, []);
+
   const randomGif = useMemo(() => {
     return CELEBRATION_GIFS[Math.floor(Math.random() * CELEBRATION_GIFS.length)];
   }, []);

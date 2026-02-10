@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const styles = {
   container: {
@@ -26,6 +26,10 @@ const styles = {
 };
 
 const No: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Why would you go to the "No" page?';
+  }, []);
+
   return (
     <div style={styles.container}>
       <img src="/gerbus/images/justin-burned-small.jpg" alt="Burned" style={styles.image} />
