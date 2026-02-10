@@ -40,12 +40,12 @@ const styles = {
     width: 'min(520px, 90vw)',
     height: 'min(200px, 30vh)',
     margin: '0 auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '2rem',
   },
   yesButton: {
+    position: 'absolute' as const,
+    top: '50%',
+    left: '20%',
+    transform: 'translate(-50%, -50%)',
     padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem)',
     fontSize: 'clamp(1rem, 3vw, 1.5rem)',
     backgroundColor: '#ff69b4',
@@ -59,6 +59,9 @@ const styles = {
   },
   noButton: {
     position: 'absolute' as const,
+    top: '50%',
+    left: '70%',
+    transform: 'translate(-50%, -50%)',
     padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem)',
     fontSize: 'clamp(1rem, 3vw, 1.5rem)',
     backgroundColor: '#e5e7eb',
@@ -79,6 +82,24 @@ const Valentine: React.FC = () => {
 
   const handleYes = useCallback(() => {
     alert('Yay! 💕 I knew you would say yes! 🎉');
+  }, []);
+
+  const handleNoClick = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    if (!zoneRef.current || !noButtonRef.current) return;
+
+    const zone = zoneRef.current.getBoundingClientRect();
+    const button = noButtonRef.current.getBoundingClientRect();
+
+    const maxLeft = zone.width - button.width;
+    const maxTop = zone.height - button.height;
+
+    const newLeft = Math.random() * maxLeft;
+    const newTop = Math.random() * maxTop;
+
+    noButtonRef.current.style.left = `${newLeft}px`;
+    noButtonRef.current.style.top = `${newTop}px`;
+    noButtonRef.current.style.transform = 'none';
   }, []);
 
   const moveNo = useCallback((px: number, py: number) => {
@@ -127,7 +148,12 @@ const Valentine: React.FC = () => {
           <button onClick={handleYes} style={styles.yesButton}>
             Yes! 💕
           </button>
-          <button ref={noButtonRef} style={styles.noButton}>
+          <button
+            ref={noButtonRef}
+            onClick={handleNoClick}
+            onTouchStart={handleNoClick}
+            style={styles.noButton}
+          >
             No 😢
           </button>
         </div>
