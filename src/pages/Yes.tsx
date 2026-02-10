@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 // Add your GIF URLs here
 const CELEBRATION_GIFS = [
-  'https://media.giphy.com/media/example1/giphy.gif',
+  'https://tenor.com/view/lov-you-gif-7161129628444095192',
   'https://media.giphy.com/media/example2/giphy.gif',
   'https://media.giphy.com/media/example3/giphy.gif',
 ];
