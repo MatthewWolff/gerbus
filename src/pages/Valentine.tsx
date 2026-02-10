@@ -82,7 +82,7 @@ const Valentine: React.FC = () => {
   const noButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleYes = useCallback(() => {
-    alert('Yay! 💕 I knew you would say yes! 🎉');
+    window.location.href = '/gerbus/yes';
   }, []);
 
   const handleNoClick = useCallback((e: React.MouseEvent | React.TouchEvent) => {
