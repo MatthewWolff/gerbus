@@ -27,7 +27,7 @@ const styles = {
 
 const No: React.FC = () => {
   useEffect(() => {
-    document.title = 'Why would you go to the "No" page?';
+    document.title = 'No????';
   }, []);
 
   return (
