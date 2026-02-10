@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useRef, useCallback } from 'react';
 
 const DETECTION_RADIUS = 140;
 const MOVE_DISTANCE = 150;
@@ -13,6 +13,15 @@ const styles = {
     background: 'linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%)',
     fontFamily: 'Arial, sans-serif',
     padding: '20px',
+  },
+  card: {
+    width: 'min(720px, 92vw)',
+    padding: '26px 22px',
+    background: 'rgba(255, 255, 255, 0.8)',
+    backdropFilter: 'blur(10px)',
+    borderRadius: '22px',
+    textAlign: 'center' as const,
+    boxShadow: '0 18px 60px rgba(0,0,0,0.15)',
   },
   title: {
     fontSize: '3rem',
@@ -108,14 +117,16 @@ const Valentine: React.FC = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>💝 Will you be my Valentine? 💝</h1>
-      <div ref={zoneRef} onMouseMove={handleMouseMove} style={styles.buttonZone}>
-        <button onClick={handleYes} style={styles.yesButton}>
-          Yes! 💕
-        </button>
-        <button ref={noButtonRef} style={styles.noButton}>
-          No 😢
-        </button>
+      <div style={styles.card}>
+        <h1 style={styles.title}>💝 Will you be my Valentine? 💝</h1>
+        <div ref={zoneRef} onMouseMove={handleMouseMove} style={styles.buttonZone}>
+          <button onClick={handleYes} style={styles.yesButton}>
+            Yes! 💕
+          </button>
+          <button ref={noButtonRef} style={styles.noButton}>
+            No 😢
+          </button>
+        </div>
       </div>
     </div>
   );
