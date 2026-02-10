@@ -3,9 +3,7 @@
 <head>
     <script>
         // Preserve the path for React Router
-        const fullPath = window.location.pathname;
-        // Remove the base path from the beginning
-        const path = fullPath.startsWith('/gerbus') ? fullPath.substring(7) : fullPath;
+        const path = window.location.pathname;
         const search = window.location.search;
         window.location.replace('/gerbus/' + (search ? search + '&from=404' : '?from=404') + '#' + path);
     </script>
